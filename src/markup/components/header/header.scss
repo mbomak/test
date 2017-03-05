@@ -1,3 +1,15 @@
 .header {
 
+	&__top {
+		width: 100%;
+
+		background-color: $color-header-top-bg;
+	}
+
+	&__wrapper {
+		max-width: 1000px;
+		margin: 0 auto;
+
+		outline: 1px solid #000;
+	}
 }
