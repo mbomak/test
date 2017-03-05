@@ -1,0 +1,40 @@
+.local {
+	a {
+		display: inline-block;
+		position: relative;
+		margin-right: 30px;
+		text-decoration: none;
+		color: $color-link;
+		font-weight: 700;
+		transition: opacity 0.3s;
+
+		&:before {
+			content: '';
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: -1px;
+			height: 1px;
+			background-color: $color-link;
+		}
+
+		&:hover:before {
+			opacity: 1;
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:active {
+			color: $color-link;
+		}
+
+	}
+
+	span {
+		color: #000;
+		font-weight: 700;
+	}
+}

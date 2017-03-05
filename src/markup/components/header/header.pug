@@ -1,3 +1,14 @@
 mixin header(data)
     +b.HEADER.header()&attributes(attributes)
-        block
+        .header__top
+          .header__wrapper
+            include ../local/local
+            div
+              .header__online-board
+                != pugHelpers.Icon.call(locals, {iconName: 'clock', className: 'header__clock'})
+                a(href=jv0) Онлайн табло
+              a(class="header__login" href='#') Вход и регистрация
+        .header__bot
+          .header__wrapper
+            include ../logo/logo
+            include ../search/search

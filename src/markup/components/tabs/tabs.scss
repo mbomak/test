@@ -1,0 +1,43 @@
+.tabs {
+	border-top: 1px solid $color-gray;
+
+	&__wrapper {
+		position: relative;
+		max-width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__titles {
+		position: absolute;
+		top: -61px;
+		left: 50%;
+		transform: translate(-48%);
+		display: inline-block;
+		text-align: center;
+		z-index: 10;
+		.active {
+			border: 1px solid $color-gray;
+			border-top: 2px solid $color-red;
+			border-bottom: 1px solid transparent;
+			background: #fff; 
+		}
+	}
+
+	&__title {
+		display: inline-block;
+		cursor: pointer;
+		padding: 9px 12px 29px;
+		font-size: 16px;
+	}
+
+	&__container {
+		.active {
+			display: block;
+		}
+	}
+
+	&__content {
+		display: none;
+	}
+}
