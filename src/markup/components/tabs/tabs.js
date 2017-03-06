@@ -5,8 +5,8 @@
   
     //private properties
     var _tabs = obj,
-    		_tabsTitle = document.querySelectorAll( '.tabs__title' ),
-    		_tabsContent = document.querySelectorAll( '.tabs__content' );
+    		_tabsTitle = document.getElementsByClassName( 'tabs__title' ),
+    		_tabsContent = document.getElementsByClassName( 'tabs__content' );
 
 
     //private methods
@@ -18,16 +18,16 @@
     _onEvents = function () {
     
 
-    	_tabsTitle.forEach( function( el ){
+    	for ( var i = _tabsTitle.length; i--;){
 
-    		el.addEventListener( 'click', function(){
+    		_tabsTitle[i].addEventListener( 'click', function(){
 
     			_initTab( this );
 
 
     		},false );
 
-    	});
+    	};
         
     }, 
     _initTab = function ( thisEl ) {
@@ -46,19 +46,19 @@
 
     			}(thisEl);
 
-    	_tabsTitle.forEach( function( el ){
+    	for ( var i = _tabsTitle.length; i--; ){
 
-    		el.className = 'tabs__title';
+    		_tabsTitle[i].className = 'tabs__title';
 
-    	});
+    	};
 
     	thisEl.className = 'tabs__title active';
 
-    	_tabsContent.forEach( function( el ){
+    	for ( var i = _tabsContent.length; i--; ){
 
-    		el.className = 'tabs__content';
+    		_tabsContent[i].className = 'tabs__content';
 
-    	});
+    	};
 
     	_tabsContent[childIndex].className = 'tabs__content active';
 
@@ -66,12 +66,15 @@
   
     _constructor();
   
-  };
+  },
 
-  document.querySelectorAll( '.tabs' ).forEach( function( item ){
+  tabs = document.getElementsByClassName( 'tabs' );
 
-     new Tabs( item );
+  for ( var i = tabs.length; i--;) {
 
-  });
+    new Tabs ( tabs[i] );
+
+  }
+
   
 } ) ();

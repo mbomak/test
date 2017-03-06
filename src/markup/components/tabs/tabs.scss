@@ -3,8 +3,9 @@
 
 	&__wrapper {
 		position: relative;
-		padding: 0 15px;
+
 		max-width: 1130px;
+		padding: 0 15px;
 		margin: 0 auto;
 
 		text-align: center;
@@ -15,8 +16,11 @@
 		z-index: 10;
 		top: -61px;
 		left: 50%;
+
 		display: inline-block;
+
 		text-align: center;
+
 		transform: translate(-48%);
 		.active {
 			border: 1px solid $color-gray;
@@ -29,7 +33,9 @@
 	&__title {
 		display: inline-block;
 		padding: 9px 12px 29px;
+
 		font-size: 16px;
+
 		cursor: pointer;
 	}
 
@@ -50,8 +56,11 @@
 		&__titles {
 			top: -61px;
 			left: 15px;
+
 			display: inline-block;
+
 			text-align: center;
+
 			transform: translate(0);
 		}
 	}
@@ -62,13 +71,17 @@
 		&__titles {
 			top: -50px;
 			left: 15px;
+
 			display: inline-block;
+
 			text-align: center;
+
 			transform: translate(0);
 		}
 
 		&__title {
 			padding: 9px 5px 20px;
+
 			font-size: 14px;
 		}
 	}
