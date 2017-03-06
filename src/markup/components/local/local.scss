@@ -44,3 +44,13 @@
 		color: #000;
 	}
 }
+
+@media (max-width: 640px) {
+	.local{
+		margin-bottom: 10px;
+
+		a {
+			margin-right: 25px;
+		}
+	}
+}

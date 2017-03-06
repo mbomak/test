@@ -1,0 +1,136 @@
+.slider {
+	box-shadow: 0 48px 0 -38px rgba(129,129,129,.3),0 22px 0 -17px rgba(100,100,100,.7);
+
+	&__item {
+		height: 434px;
+		padding: 213px 0 0 150px;
+
+		text-align: left;
+
+		background: url(%=static=%general/slide.jpg) center center no-repeat;
+		background-size: cover;
+
+		p:first-child {
+			margin: 0;
+			margin-bottom: -9px;
+
+			font-family: HeliosCondThin;
+			font-size: 48px;
+			color: #fff;
+		}
+
+		h2 {
+			position: relative;
+
+			display: inline-block;
+			margin: 0;
+			margin-bottom: 5px;
+
+			font-family: HeliosCondLight;
+			font-size: 76px;
+			color: #fff;
+
+			&:after {
+				content: '';
+
+				position: absolute;
+				top: 5px;
+				right: -34px;
+
+				width: 28px;
+				height: 30px;
+
+				background: url(%=static=%general/plane-icon.png) center center no-repeat;
+				background-size: cover;
+			}
+		}
+
+		p:last-child {
+			margin: 0;
+
+			font-family: HeliosCondLight;
+			font-size: 14px;
+			color: #fff;
+		}
+	}
+
+	//Slider arrow style
+	.arrowLeft,.arrowRight {
+	  position: absolute;
+	  z-index: 100;
+	  top: 50%;
+
+	  width: 43px;
+	  height: 43px;
+	  padding: 0;
+	  margin-top: -27px;
+
+	  border: none;
+	  border-bottom: 1px solid #818181;
+	  border-left: 1px solid #818181;
+	  background: none;
+	  background-repeat: no-repeat;
+
+	  transition: border 0.3s;
+
+	  &:focus {
+	  	outline: none;
+	  }
+
+	  &:hover {
+	  	border-color: #fff;
+	  }
+	}
+
+	.arrowLeft {
+	  left: 79px;
+
+	  transform: rotate(45deg);
+	}
+
+	.arrowRight {
+	  right: 79px;
+
+	  transform: rotate(-135deg);
+	}
+}
+
+@media (max-width: 900px) {
+	.slider {
+		&__item {
+			padding: 213px 0 0 50px;
+		}
+		.arrowLeft {
+		  left: 15px;
+		}
+
+		.arrowRight {
+		  right: 15px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.slider {
+		.arrowLeft,.arrowRight {
+		  display: none;
+		}
+
+		&__item {
+			height: 300px;
+			padding: 100px 0 0 15px;
+
+			p:first-child {
+				margin-bottom: 5px;
+				font-size: 20px;
+			}
+			h2 {
+				margin-bottom: 15px;
+				font-size: 30px;
+			}
+			p:last-child {
+				font-size: 14px;
+			}
+		}
+	}
+}

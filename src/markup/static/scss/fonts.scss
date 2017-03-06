@@ -8,3 +8,19 @@
 $font-1: 'Open Sans', Helvetica, Arial, sans-serif;
 */
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+@font-face {
+    font-family:'HeliosCondThin';
+		src: url('../fonts/HeliosCondThin/HeliosCondThin.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'HeliosCondLight';
+		src: url('../fonts/HeliosCondLight/HeliosCondLight.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}

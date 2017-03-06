@@ -7,7 +7,7 @@ mixin header(data)
               .header__online-board
                 != pugHelpers.Icon.call(locals, {iconName: 'clock', className: 'header__clock'})
                 a(href=jv0) Онлайн табло
-              a(class="header__login" href='#') Вход и регистрация
+              a(class="header__login popup__open",data-popup="login") Вход и регистрация
         .header__bot
           .header__wrapper
             include ../logo/logo

@@ -68,3 +68,9 @@
 		transition: opacity 0.3s;
 	}
 }
+
+@media (max-width: 640px) {
+	.search {
+		display: inline-block;
+	}
+}

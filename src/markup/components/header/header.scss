@@ -58,6 +58,7 @@
 		color: $color-link;
 		text-decoration: none;
 
+		cursor: pointer;
 		transform: translateY(-6px);
 
 		&:before {
@@ -82,5 +83,19 @@
 	&__bot {
 		padding: 20px 0px 13px 0px;
 	}
+}
 
+@media (max-width: 900px) {
+	.header {
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 640px) {
+	.header {
+		margin-bottom: 70px;
+		&__wrapper {
+			display: block;
+		}
+	}
 }
